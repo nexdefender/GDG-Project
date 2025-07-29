@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDG Frontend project</title>
+    <link rel="stylesheet" href="./style.css">
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        .font-poppins {
+          font-family: 'Poppins', sans-serif;
+             }
+
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+
+        .font-nunito {
+           font-family: 'Nunito Sans', sans-serif;
+             }
+        
+     </style>
+</head>
+<body>
+    <!-- header -->
+    <header class="bg-cover bg-no-repeat bg-center bg-[url('images/girl.png')] min-h-screen">
+        <div class="px-4 sm:px-6 lg:px-8 py-6 mx-auto  flex flex-wrap items-center justify-between font-poppins">
+            <div class="h-20 w-38  bg-cover bg-no-repeat bg-[url(images/skilline.png)] bg-left ml-4"></div>
+            <div class="lg:flex items-center gap-20 text-[22px] font-normal hidden mr-26">
+                <ul class="flex gap-22 text-[#252641]">
+                    <li><a href="#" class="hover:text-[#F48C06] transition hover:border-b-2 border-[#F48C06]">Home</a></li>
+                    <li><a href="#" class="hover:text-[#F48C06] transition hover:border-b-2 border-[#F48C06]">Careers</a>
+                    </li>
+                    <li><a href="#" class="hover:text-[#F48C06] transition hover:border-b-2 border-[#F48C06]">Blog</a></li>
+                    <li><a href="#" class="hover:text-[#F48C06] transition hover:border-b-2 border-[#F48C06]">About Us</a>
+                    </li>
+                </ul>
+                <div class="gap-10 flex flex-wrap items-center justify-center">
+                    <div
+                        class="h-[60px] w-[160px] bg-white rounded-[80px] flex items-center justify-center  transition-all duration-500 ease-in-out hover:bg-[#F48C06]  hover:text-2xl   hover:shadow-lg hover:scale-105">
+                        Login
+                    </div>
+                    <div
+                        class="h-[60px] w-[160px] bg-[#F48C06] rounded-[80px] flex items-center justify-center text-white  transition-all duration-500 ease-in-out hover:bg-[#F48C06]   hover:text-2xl  hover:shadow-lg hover:scale-105">
+                        Sign
+                        Up</div>
+                </div>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <div class="lg:hidden">
+                <button id="menuToggle" class="text-2xl text-[#252641] hover:text-4xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="w-full mt-4 hidden flex-col justify-between  gap-10 text-[20px] font-medium text-[#252641] lg:hidden">
+                <ul class="flex items-center justify-center gap-10">
+                    <li><a href="#" class="hover:text-[#F48C06]">Home</a></li>
+                    <li><a href="#" class="hover:text-[#F48C06]">Careers</a></li>
+                    <li><a href="#" class="hover:text-[#F48C06]">Blog</a></li>
+                    <li><a href="#" class="hover:text-[#F48C06]">About Us</a></li>
+                </ul>
+                <div class="gap-8 flex flex-wrap items-center justify-center mt-8">
+                    <div
+                        class="h-[50px] w-[140px] bg-white rounded-[80px] flex items-center justify-center  transition-all duration-500 ease-in-out hover:bg-[#F48C06]  hover:text-2xl   hover:shadow-lg hover:scale-105">
+                        Login
+                    </div>
+                    <div
+                        class="h-[50px] w-[140px] bg-[#F48C06] rounded-[80px] flex items-center justify-center text-white  transition-all duration-500 ease-in-out hover:bg-[#F48C06]   hover:text-2xl  hover:shadow-lg hover:scale-105">
+                        Sign
+                        Up</div>
+                </div>
+            </div>
+        </div>
+
+    
+        <!-- header sentence part -->
+        <div class="h-[400px] w-[680px] px-4 py-6 mx-auto lg:flex flex-col ml-14 font-poppins mt-30 hidden">
+            <div class="font-bold text-[#2F327D] text-[54px]"><span class="text-[#F48C06]">Studying </span>Online is now
+            </div>
+            <div class="font-bold text-[#2F327D] text-[54px]">much easier</div>
+            <div class="w-[523px] flex text-[#464646] text-[24px] font-normal font-nunito mt-6 mb-6">Skilline is an
+                interesting
+                platform that will teach you in more an interactive way</div>
+            <div class="flex items-center gap-6">
+                <div
+                    class="w-[220px] h-[80px] bg-[#F48C06] rounded-[80px] flex items-center justify-center font-semibold text-[24px] text-white 
+                                    transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-[#FF9F1C] hover:-translate-y-1">
+                    Join for Free
+                </div>
+    
+                <div class="w-[80px] h-[80px] flex items-center justify-center rounded-full bg-white 
+                            transition duration-300 ease-in-out hover:scale-110 hover:shadow-xl group">
+                    <div class="w-0 h-0 border-t-[20px] border-b-[20px] border-l-[30px] border-t-transparent border-b-transparent border-l-[#23BDEE] ml-2 
+                           transition-all duration-300 ease-in-out group-hover:border-l-[#F48C06] group-hover:ml-4">
+                    </div>
+                </div>
+
+                <div class="font-normal text-[24px] flex items-center justify-center h-[80px] text-[#252641]">Watch how it
+                    works
+                </div>
+            </div>
+        </div>
+    
+        <!-- for small screen  -->
+        <div class="flex  flex-col gap-6 lg:hidden ml-4 mt-60">
+            <div
+                class="w-[220px] h-[80px] bg-[#F48C06] rounded-[80px] flex items-center justify-center font-semibold text-[24px] text-white 
+                 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-[#FF9F1C] hover:-translate-y-1">
+                Join for Free
+                </div>
+            <div class="w-[80px] h-[80px] flex items-center justify-center rounded-full bg-white 
+                        transition duration-300 ease-in-out hover:scale-110 hover:shadow-xl group">
+                <div class="w-0 h-0 border-t-[20px] border-b-[20px] border-l-[30px] border-t-transparent border-b-transparent border-l-[#23BDEE] ml-2 
+                       transition-all duration-300 ease-in-out group-hover:border-l-[#F48C06] group-hover:ml-4">
+                </div>
+            </div>
+            <div class="font-normal text-[24px] flex  h-[80px] text-[#252641] ml-2">Watch how it works</div>
+        </div>
+    </header>
+
+    <!-- header down side content -->
+
+    <!-- company div -->
+    <div class="flex items-center justify-center mt-20 px-4">
+        <div class="h-[150px] w-full font-poppins font-medium flex flex-col items-center justify-between ">
+            <div class="w-[603px] h-[65px] text-center text-[20px] md:text-[24px] lg:text-[28px] text-[#696984]">Trusted by 5,000+ Companies Worldwide</div>
+            <div class="w-full h-[68px] bg-contain bg-no-repeat bg-center bg-[url('images/company.png')]"></div>
+        </div>
+    </div>
+
+    <!-- all in one div-->
+<div class="flex justify-center mt-20 px-4">
+    <div class="w-full max-w-4xl font-poppins flex flex-col items-center text-center space-y-4">
+
+        <div class="text-[#2F327D] font-bold text-[28px] md:text-[32px] lg:text-[36px] leading-snug">
+            All-In-One <span class="text-[#F48C06]">Cloud Software.</span>
+        </div>
+
+        <div class="text-[#696984] font-normal text-[18px] md:text-[20px] lg:text-[24px] leading-relaxed">
+            Skilline is one powerful online software suite that combines all the tools needed to run a successful school
+            or office.
+        </div>
+    </div>
+</div>
+
+<!-- three templates  -->
+
+<div class="flex items-center justify-center px-4 mt-40">
+    <div class="w-full max-w-8xl flex flex-wrap justify-center gap-8">
+        <div class="flex flex-col items-center justify-between rounded-[20px] shadow-xl  w-full sm:w-2/3 md:w-[45%] lg:w-[30%] p-6 font-poppins ">
+            <div class="bg-contain bg-no-repeat bg-center bg-[url('images/circel_one.png')] w-[200px] h-[200px] mt-[-92px]"></div>
+            <div class="w-[343px] h-[90px] flex items-center justify-center text-center text-[#2F327D] font-medium text-[30px]  md:text-[28px] mt-4">Online Billing, Invoicing, & Contracts
+            </div>
+            <div class="w-[341px] h-[144px]  flex items-center justify-center text-center font-normal  text-[20px] text-[#696984] md:text-[18px]  mt-4">Simple and secure control of your organization’s financial and
+                legal transactions. Send customized invoices and contracts</div>
+        </div>
+        <div class="flex flex-col items-center justify-between rounded-[20px] shadow-xl  w-full sm:w-2/3 md:w-[45%] lg:w-[30%] p-6 font-poppins">
+            <div class="bg-contain bg-no-repeat bg-center bg-[url('images/circel_two.png')] w-[200px] h-[200px] mt-[-92px]"></div>
+            <div class="w-[343px] h-[90px] flex items-center justify-center text-center text-[#2F327D] font-medium text-[30px] md:text-[28px] mt-4">Easy Scheduling & Attendance Tracking
+            </div>
+            <div class="w-[341px] h-[144px]  flex items-center justify-center text-center font-normal text-[20px] text-[#696984] md:text-[18px]  mt-4">Schedule and reserve classrooms at one campus or multiple campuses. Keep detailed records of student attendance</div>
+        </div>
+        <div class="flex flex-col items-center justify-between rounded-[20px] shadow-xl  w-full sm:w-2/3 md:w-[45%] lg:w-[30%] p-6 font-poppins">
+            <div class="bg-contain bg-no-repeat bg-center bg-[url('images/circel_three.png')] w-[200px] h-[200px] mt-[-92px]"></div>
+            <div class="w-[343px] h-[90px] flex items-center justify-center text-center text-[#2F327D] font-medium text-[30px] md:text-[28px] mt-4">Customer Tracking
+            </div>
+            <div class="w-[341px] h-[144px]  flex items-center justify-center text-center font-normal text-[20px] text-[#696984] md:text-[18px]  mt-4">Automate and track emails to individuals or groups. Skilline’s built-in system helps organize your organization </div>
+        </div>
+    </div>
+</div>
+
+       <!-- skilline content  -->
+        <div class="flex items-center justify-center px-4 mt-40">
+            <div class="w-full max-w-5xl px-4 py-6 gap-10 flex flex-col items-center justify-between font-poppins">
+                <div class="font-semibold text-[28px] md:text-[36px] lg:text-[44px] text-center text-[#2F327D] leading-tight">What is <span class="text-[#F48C06]">Skilline?</span></div>
+                <div class="font-normal text-[16px] md:text-[20px] lg:text-[24px] text-[#696984] text-center lg:w-[1101px] tracking-wide">Skilline is a platform that allows educators to create online classes whereby they can store the course materials online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students with feedback all in one place.</div>
+            </div>
+        </div>
+
+        <!-- two images downside of skilline contenet -->
+         <div class="flex items-center justify-center  mt-20 px-4">
+            <div class="w-full max-w-[1300px] flex flex-col lg:flex-row items-center justify-between gap-20">
+                <div class="w-full lg:w-1/2 h-[400px] bg-cover bg-no-repeat bg-center bg-[url('images/inst.png')] rounded-[20px] flex flex-col items-center justify-center font-poppins gap-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="font-semibold text-[32px] w-[292px] h-[48px] text-[#FFFFFF] text-center">FOR INSTRUCTORS</div>
+                    <div class="w-[283px] h-[80px] font-medium flex items-center justify-center text-white border-white text-[22px] text-center border-[1px] rounded-[80px] hover:bg-amber-100 hover:text-[#2F327D] hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">Start a class today</div>
+                </div>
+                <div class="w-full lg:w-1/2 h-[400px] bg-cover bg-no-repeat bg-center bg-[url('images/stud.png')] rounded-[20px] flex flex-col items-center justify-center font-poppins gap-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="font-semibold text-[32px] w-[292px] h-[48px] text-[#FFFFFF] text-center">FOR STUDENTS</div>
+                    <div class="w-[283px] h-[80px] font-medium flex items-center justify-center text-white text-[22px] text-center bg-[#23BDEEE5] rounded-[80px] hover:bg-[#23BDEE] hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">Enter access code</div>
+                </div>
+            </div>
+         </div>
+
+         <!-- content and images at middle -->
+        <div class="flex items-center justify-center px-4 mt-40">
+            <div class="w-full max-w-[1550px] flex flex-col lg:flex-row item-center justify-between font-poppins gap-10 ">
+                <div class="w-full lg:w-[50%] flex flex-col items-start lg:items-center">
+                    <div
+                        class="w-full max-w-[660px] h-[124px] bg-contain bg-no-repeat bg-center bg-[url('images/text.png')] mt-12 mx-auto lg:ml-0">
+                    </div>
+                    <div
+                        class="w-full max-w-[700px] text-[18px] md:text-[20px] lg:text-[24px] font-normal tracking-normal text-[#696984] mt-10 mx-auto text-center lg:text-left px-2 ">
+                        Skilline’s school management software helps traditional and online schools manage scheduling,
+                        attendance, payments and virtual classrooms all in one secure cloud-based system.</div>
+                    <div
+                        class="underline underline-offset-2 w-[125px] h-[40px] font-normal text-[22px] text-[#696984] mt-6 lg:mt-4 lg:ml-[-550px] ml-40">
+                        Learn more</div>
+                </div>
+                <div class="w-full lg:w-[54%] h-[300px] md:h-[400px] lg:h-[480px] 
+                    bg-cover bg-no-repeat bg-center bg-[url('images/groupV.png')] 
+                    rounded-2xl transition-all duration-500 
+                    hover:scale-105 hover:brightness-110 hover:shadow-[0_10px_25px_rgba(36,95,211,0.25)]"></div>
+            </div>
+        </div>
+
+          <!-- feature text -->
+           <div class="flex items-center justify-center px-4 lg:mt-40 mt-20">
+            <div class="w-full max-w-[890px] flex flex-col items-center  gap-2 font-poppins">
+                <div class="h-[65px] font-bold text-[28px] md:text-[32px] lg:text-[36px] text-[#2F327D]">Our <span class="text-[#F48C06]">Features</span></div>
+                <div class="h-[45px] font-normal text-[16px] md:text-[20px] lg:text-[24px] text-[#696984]">This very extraordinary feature, can make learning activities more efficient</div>
+            </div>
+           </div>
+
+           <!-- interfaced design -->
+            <div class="flex items-center justify-center px-4 lg:mt-30 mt-20">
+                <div class="w-full max-w-[1580px] flex flex-col lg:flex-row items-center justify-between gap-18">
+                    <div class="w-full lg:w-1/2 h-[580px] sm:h-[400px] lg:h-[580px] bg-contain bg-no-repeat bg-center bg-[url('images/bigGroup.png')] mt-10 rounded-xl transition-all duration-500 ease-in-out
+                                hover:scale-105 hover:contrast-125 hover:shadow-[0_12px_30px_rgba(244,140,6,0.3)] hover:saturate-150">
+                    </div>
+                    <!-- right content -->
+                    <div class="w-full lg:w-[550px] flex flex-col items-center justify-between font-poppins mr-10 gap-8">
+                        <div class="w-full  font-semibold text-[28px] sm:text-[32px] lg:text-[40px] text-[#2F327D] ml-16">A
+                            <span class="text-[#F48C06]">user interface</span> designed for the classroom
+                        </div>
+                        <div class="flex items-center justify-between gap-4 w-[520px] h-[80px] mr-10">
+                            <div
+                                class="w-[60px] lg:w-[80px] lg:h-[80px] bg-cover  bg-no-repeat bg-center bg-[url('images/circleSO.png')] text-shadow-xl flex item-center justify-center">
+                            </div>
+                            <div
+                                class="font-normal text-[16px] sm:text-[18px] lg:text-[22px] tracking-normal text-[#696984] w-[443px] h-[80px]">
+                                Teachers don’t
+                                get lost in the grid view and have a dedicated Podium space.</div>
+                        </div>
+                        <div class="flex items-center justify-between gap-4 w-[520px] h-[80px] mr-10">
+                            <div
+                                class="w-[60px] lg:w-[80px] lg:h-[80px] bg-cover  bg-no-repeat bg-center bg-[url('images/circleST.png')] text-shadow-xl flex item-center justify-center">
+                            </div>
+                            <div
+                                class="font-normal text-[16px] sm:text-[18px] lg:text-[22px] tracking-normal text-[#696984] w-[443px] h-[80px]">
+                                TA’s and
+                                presenters can be moved to the front of the class.
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between gap-4 w-[520px] h-[80px] mr-10">
+                            <div
+                                class="w-[60px] lg:w-[80px] lg:h-[80px] bg-cover  bg-no-repeat bg-center bg-[url('images/circleSTh.png')] text-shadow-xl flex item-center justify-center">
+                            </div>
+                            <div
+                                class="font-normal text-[16px] sm:text-[18px] lg:text-[22px] tracking-normal text-[#696984] w-[443px] h-[80px]">
+                                Teachers can
+                                easily see all students and class data at one time.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          <!-- tools for teacher -->
+        <div class="flex items-center justify-center mt-30 px-4">
+            <div class="w-full max-w-[1442px] flex flex-col-reverse lg:flex-row  items-center justify-between gap-20">
+                <div class="font-poppins flex flex-col items-start justify-between  gap-4 w-full lg:w-1/2">
+                    <div class="w-full lg:w-[393px] font-semibold text-[28px] sm:text-[32px] lg:text-[40px] text-[#2F327D] "><span class="text-[#F48C06]">Tools
+                        </span>For Teachers And Learners</div>
+                    <div class="max-w-[568px] font-normal text-[16px] sm:text-[18px] lg:text-[22px] text-[#696984]">Class has a dynamic set of teaching tools built to be deployed and used during class.
+                        Teachers can handout assignments in real-time for students to complete and submit.</div>
+                </div>
+                <div class="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-[612px] bg-contain bg-no-repeat bg-center bg-[url('images/girlTwo.png')] transition-all duration-500 ease-in-out hover:grayscale-0 
+                            hover:rotate-1 hover:scale-[1.03] hover:shadow-[0_10px_40px_rgba(255,105,180,0.25)] 
+                            hover:border-[2px] hover:border-pink-300 rounded-2xl"></div>
+                </div>
+        </div>
+
+          <!-- true and false -->
+        <div class="flex items-center justify-center mt-30 px-4">
+            <div class="w-full max-w-[1442px] flex flex-col lg:flex-row  items-center justify-between gap-20">
+                <!-- image -->
+                <div
+                    class="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-[652px] bg-contain bg-no-repeat bg-center bg-[url('images/TandF.png')] transition-all duration-700 ease-in-out 
+            hover:scale-105 hover:rotate-2 hover:saturate-150 hover:brightness-110 hover:shadow-[0_0_30px_#F48C06]/60">
+                </div>
+                <!-- text -->
+                <div class="font-poppins flex flex-col items-start w-full lg:w-1/2 gap-4">
+                    <div class=" w-full lg:w-[347px]  font-semibold text-[28px] sm:text-[32px] lg:text-[40px] text-[#2F327D] ">
+                        Assessments, <span class="text-[#F48C06]">Quizzes</span>, Tests</div>
+                    <div class="max-w-[596px] font-normal text-[16px] sm:text-[18px] lg:text-[22px] text-[#696984]">Easily
+                        launch live assignments, quizzes, and tests.
+                        Student results are automatically entered in the online gradebook.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- class managment -->
+        <div class="flex items-center justify-center mt-30 px-4">
+            <div class="w-full max-w-[1442px] flex flex-col-reverse lg:flex-row  items-center justify-between gap-20">
+                <!-- text -->
+                <div class="font-poppins flex flex-col items-start justify-between  gap-4 w-full lg:w-1/2">
+                    <div class="w-full lg:w-[421px] font-semibold text-[28px] sm:text-[32px] lg:text-[40px] text-[#2F327D] ">
+                        <span class="text-[#F48C06]">Class Management</span> Tools for Educators</div>
+                    <div class="max-w-[646px] font-normal text-[16px] sm:text-[18px] lg:text-[22px] text-[#696984]">Class
+                        provides tools to help run and manage the class such as Class Roster, Attendance, and more. With the
+                        Gradebook, teachers can review and grade tests and quizzes in real-time.
+                        Class has a dynamic set of teaching tools built to be deployed and used during class.
+                        Teachers can handout assignments in real-time for students to complete and submit.</div>
+                </div>
+                <!-- image -->
+                <div
+                    class="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-[612px] bg-contain bg-no-repeat bg-center bg-[url('images/grade.png')] 
+                transition-all duration-500 hover:scale-105 hover:drop-shadow-[0_10px_15px_rgba(36,95,211,0.3)] rounded-2xl">
+                </div>
+            </div>
+        </div>
+
+        <!-- one-on-one -->
+         <div class="flex items-center justify-center mt-30 px-4">
+            <div class="w-full max-w-[1442px] flex flex-col lg:flex-row  items-center justify-between gap-20 lg:gap-40">
+                <!-- image -->
+                <div
+                    class="w-full lg:w-1/2 h-[250px] sm:h-[350px] lg:h-[500px] bg-contain bg-no-repeat bg-center bg-[url('images/private.png')] transition-all duration-700 ease-in-out 
+            hover:scale-105 hover:rotate-2 hover:saturate-150 hover:brightness-110 hover:shadow-[0_0_30px_#F48C06]/60">
+                </div>
+                <!-- text -->
+                <div class="font-poppins flex flex-col items-start w-full lg:w-1/2 gap-4">
+                    <div class=" w-full lg:w-[274px]  font-semibold text-[28px] sm:text-[32px] lg:text-[40px] text-[#2F327D] ">
+                       One-on-One <span class="text-[#F48C06]">Discussionss</span></div>
+                    <div class="max-w-[540px] font-normal text-[16px] sm:text-[18px] lg:text-[22px] text-[#696984]">Teachers and teacher assistants can talk with students privately without leaving the Zoom environment.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- buttton feature -->
+         <div class="flex items-center justify-center px-4 mt-20">
+            <div class="w-full max-w-[280px]  h-[80px] border-[1px] rounded-[80px] font-nunito text-[20px] sm:text-[22px] lg:text-[24px] font-normal text-[#F48C06] border-[#F48C06] flex items-center justify-center  transition-all duration-500 ease-in-out 
+              hover:bg-[#F48C06] hover:text-white hover:shadow-lg hover:scale-105 hover:border-[3px] hover:border-white">
+                See more feature
+            </div>
+         </div>
+
+         <!-- integration -->
+        <div class="flex items-center justify-center mt-30 px-4">
+            <div class="w-full max-w-[1457px] flex flex-col lg:flex-row  items-center justify-between lg:gap-40 gap-20">
+                <!-- image -->
+                <div
+                    class="w-full lg:w-1/2 h-[300px] sm:h-[350px] lg:h-[460px] bg-contain bg-no-repeat bg-center bg-[url('images/drive.png')]">
+                </div>
+                <!-- text -->
+                <div class="font-nunito flex flex-col items-start w-full lg:w-1/2 gap-8">
+                    <div
+                        class="flex items-center gap-8 w-full lg:w-[280px] font-nunito font-normal text-[18px] sm:text-[20px] tracking-widest text-[#525596]">
+                        <div class="w-[60px] lg:w-[80px] border-[1px]"></div>
+                        <div class="w-full lg:w-[188px]">INTEGRATIONS</div>
+                    </div>
+                    <div class=" w-full lg:w-[480px]  font-bold text-[26px] sm:text-[28px] lg:text-[36px] text-[#2F327D] ">
+                        200+ educational tools and platform <span class="text-[#F48C06]">integrations</span></div>
+                    <div class="max-w-[687px] font-normal text-[18px] sm:text-[20px] lg:text-[24px] text-[#696984]">Schoology
+                        has every tool your classroom needs and comes pre-integrated with more than 200+ tools, student
+                        information systems (SIS), and education platforms.</div>
+                    <div
+                        class="w-full max-w-[280px]  h-[80px] border-[1px] rounded-[80px] font-nunito text-[20px] sm:text-[20px] lg:text-[22px] font-normal text-[#F48C06] border-[#F48C06] flex items-center justify-center  transition-all duration-500 ease-in-out 
+                      hover:bg-[#F48C06] hover:text-white hover:shadow-lg hover:scale-105 hover:border-[3px] hover:border-white">
+                        See All Integrations
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TESTINOMIAL -->
+             <div class="flex items-center justify-center mt-30 px-4">
+            <div class="w-full max-w-[1519px] flex flex-col-reverse lg:flex-row  items-center justify-between lg:gap-40 gap-10">
+                <!-- text -->
+                <div class="font-nunito flex flex-col items-start w-full lg:w-1/2 gap-6 lg:mb-64">
+                    <div
+                        class="flex items-center gap-4 sm:gap-6 w-full lg:w-[260px] font-nunito font-normal text-[18px] sm:text-[20px] tracking-widest text-[#525596] mt-4">
+                        <div class="w-[60px] lg:w-[80px] border-[1px]"></div>
+                        <div class="w-full lg:w-[171px]">TESTIMONIAL</div>
+                    </div>
+                    <div class=" w-full lg:w-[485px]  font-bold text-[36px] sm:text-[48px] lg:text-[60px] text-[#2F327D] ">
+                       What They Say? </div>
+                    <div class="max-w-[560px] font-normal text-[20px] sm:text-[24px] lg:text-[26px] text-[#696984] tracking-wide">Skilline has got more than 100k positive ratings from our users around the world. </div>
+                    <div class="max-w-[573px] font-normal text-[20px] sm:text-[24px] lg:text-[26px] text-[#696984] tracking-wide">Some of the students and teachers were greatly helped by the Skilline. </div>
+                    <div class="max-w-[564px] font-normal text-[20px] sm:text-[24px] lg:text-[26px] text-[#696984] tracking-wide">Are you too? Please give your assessment </div>
+                    <div
+                        class="w-full max-w-[403px] h-[80px] border-b-[1px] border-l-[1px] border-t-[1px] rounded-[80px] font-nunito text-[20px] sm:text-[20px] lg:text-[22px] font-normal text-[#F48C06] border-[#F48C06] flex items-center justify-between tracking-wide transition-all duration-500 ease-in-out hover:bg-[#F48C06] hover:text-white hover:shadow-[0_0_20px_rgba(244,140,6,0.5)] hover:scale-105">
+                        <div class="ml-10 transition-all duration-500 ease-in-out">Write your assessment</div>
+                        <div
+                            class="w-[80px] h-[80px] rounded-full flex items-center justify-center border-[1px] border-[#F48C06] transition-transform duration-500 hover:rotate-90 bg-white hover:bg-white text-[#F48C06]">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- image -->
+                <div
+                    class="w-full lg:w-1/2 h-[600px] sm:h-[700px] lg:h-[821px] bg-contain bg-no-repeat bg-center bg-[url('images/girlThree.png')] transition-all duration-500 ease-in-out hover:scale-105 hover:rotate-4 hover:shadow-[0_0_30px_rgba(244,140,6,0.4)]">
+                </div>
+            </div>
+        </div>
+
+        <!-- latest news -->
+         <div class="flex items-center justify-center px-4 lg:mt-20 mt-16">
+            <div class="w-full max-w-[890px] flex flex-col items-center  gap-2 font-nunito">
+                <div class="h-[65px] font-bold text-[28px] md:text-[32px] lg:text-[36px] text-[#2F327D]">Lastest News and Resources</div>
+                <div class="h-[43px] font-normal text-[16px] md:text-[20px] lg:text-[24px] text-[#696984]">See the developments that have occurred to Skillines in the world</div>
+            </div>
+           </div>
+
+        <!-- down side of latest news -->
+         <div class="flex items-center justify-center px-4 lg:mt-20 mt-16">
+            <div class="w-full max-w-[1557px] flex flex-col lg:flex-row items-start lg:items-center justify-between lg:gap-10 gap-20"> 
+                <!-- left side -->
+                 <!-- prob -->
+                <div class="flex flex-col item-start justify-between gap-8 font-poppins">
+                    <div class="w-full h-[200px] sm:h-[280px] md:h-[300px] lg:h-[340px] rounded-[20px] overflow-hidden group relative">
+                        <div
+                            class="w-full h-full bg-cover bg-no-repeat bg-center bg-[url('images/lap.png')] transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:brightness-110 group-hover:rotate-1">
+                        </div>
+                    </div>
+                    <div class="w-full px-6 py-2 max-w-[130px] rounded-[80px] flex items-center justify-center font-medium text-[16px] sm:text-[18px] lg:text-[20px] bg-[#F4C467] text-[#252641] transition-all duration-300 ease-in-out hover:bg-[#FFD369] hover:text-[#1A1A1A] hover:shadow-lg hover:scale-105">NEWS</div>
+                    <div class="w-full max-w-[609px] text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-medium text-[#252641]">Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution</div>
+                    <div class="w-full max-w-[609px] text-[16px] sm:text-[18px] md:text-[20px] font-normal text-[#696984]">Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates exclusively...</div>
+                    <div
+                        class="w-full max-w-[124px] text-[16px] sm:text-[18px] md:text-[20px] underline underline-offset-1 font-normal text-[#696984] transition-all duration-300 ease-in-out hover:text-[#F48C06] hover:underline-offset-4 hover:tracking-wide">
+                        Read more
+                    </div>
+
+                 </div>
+                 <!-- right side -->
+                 <div class="flex flex-col items-start justify-between gap-8 w-full lg:w-1/2">
+                    <div class="w-full max-w-[800px] h-[200px] flex items-center justify-between gap-8 sm:gap-6 sm:items-center sm:flex-row">
+                        <div tabindex="0" class="w-full sm:w-[280px] h-[180px] sm:h-[200px] 
+                                    bg-cover bg-no-repeat bg-center bg-[url('images/lastOne.png')] 
+                                    rounded-[20px] overflow-hidden 
+                                    transition-all duration-300 ease-in-out 
+                                    hover:scale-105 hover:brightness-110 
+                                    focus:outline-none focus:ring-4 focus:ring-[#F4C467] focus:ring-offset-2 focus:scale-105">
+                        </div>
+
+                        <div class="flex flex-col items-start justify-between gap-4 lg:gap-8 font-poppins">
+                            <div class="w-full max-w-[477px] font-medium text-[18px] sm:text-[20px] md:text-[22px] text-[#252641]">Class Technologies Inc. Closes $30 Million Series A Financing to Meet High Demand</div>
+                            <div class="w-full max-w-[477px] font-normal text-[16px] sm:text-[18px] md:text-[20px] text-[#696984]">Class Technologies Inc., the company that created Class,...</div>
+                        </div>
+                    </div>
+                    <div class="w-full max-w-[800px] h-[200px] flex items-center justify-between gap-8 sm:gap-6 sm:items-center sm:flex-row">
+                        <div tabindex="0" class="w-full sm:w-[280px] h-[180px] sm:h-[200px] 
+                                    bg-cover bg-no-repeat bg-center bg-[url('images/lastTwo.png')] 
+                                    rounded-[20px] overflow-hidden 
+                                    transition-all duration-300 ease-in-out 
+                                    hover:scale-105 hover:brightness-110 
+                                    focus:outline-none focus:ring-4 focus:ring-[#F4C467] focus:ring-offset-2 focus:scale-105">
+                        </div>
+
+                        <div class="flex flex-col items-start justify-between gap-4 lg:gap-8  font-poppins">
+                            <div class="w-full max-w-[477px] font-medium text-[18px] sm:text-[20px] md:text-[22px] text-[#252641]">Zoom’s earliest investors are betting millions on a better Zoom for schools</div>
+                            <div class="w-full max-w-[477px] font-normal text-[16px] sm:text-[18px] md:text-[20px] text-[#696984]">Zoom was never created to be a consumer product. Nonetheless, the...</div>
+                        </div>
+                    </div>
+                    <div class="w-full max-w-[800px] h-[200px] flex items-center justify-between gap-8 sm:gap-6 sm:items-center sm:flex-row">
+                        <div tabindex="0" class="w-full sm:w-[280px] h-[180px] sm:h-[200px] 
+                                    bg-cover bg-no-repeat bg-center bg-[url('images/lastThree.png')] 
+                                    rounded-[20px] overflow-hidden 
+                                    transition-all duration-300 ease-in-out 
+                                    hover:scale-105 hover:brightness-110 
+                                    focus:outline-none focus:ring-4 focus:ring-[#F4C467] focus:ring-offset-2 focus:scale-105">
+                        </div>
+
+                        <div class="flex flex-col items-start justify-between gap-4 lg:gap-8  font-poppins">
+                            <div class="w-full max-w-[477px] font-medium text-[18px] sm:text-[20px] md:text-[22px] text-[#252641]">Former Blackboard CEO Raises $16M to Bring LMS Features to Zoom Classrooms</div>
+                            <div class="w-full max-w-[477px] font-normal text-[16px] sm:text-[18px] md:text-[20px] text-[#696984]">This year, investors have reaped big financial returns from betting on Zoom...</div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+         </div>
+
+         <!-- footer -->
+        <footer class="flex items-center justify-center px-4 lg:mt-40 mt-20 bg-[#252641]">
+            <div class="w-full max-w-full py-10 flex flex-col items-center justify-between gap-20">
+                 <!-- one -->
+                <div class="w-full max-w-[388px] font-poppins flex flex-col sm:flex-row items-center justify-center sm:justify-between  sm:gap-2 mt-10 text-center">
+                    <div class="w-full max-w-[150px] h-[83px] bg-contain bg-no-repeat bg-center bg-[url('images/footerLogo.png')] "></div>
+                    <div class="hidden sm:block w-px h-[83px] border-[1px] border-[#626381]"></div>
+                    <div class="w-full max-w-[156px] font-semibold text-[20px] sm:text-[22px] leading-snug tracking-wide text-white">Virtual Class for Zoom</div>
+                </div>
+                   <!-- two -->
+                <div class="w-full max-w-[600px]  font-poppins flex flex-col items-center justify-between gap-4">
+                    <div class="w-full max-w-[440px] font-medium  text-[20px] sm:text-[26px] text-center tracking-wide text-[#B2B3CF]">
+                        Subscribe to get our Newsletter</div>
+                    <div class="w-full max-w-[600px] h-[60px] flex items-center justify-between gap-4">
+                        <input type="email" id="emailInput" placeholder="Your Email" class="w-full max-w-[400px] h-[60px] px-6 rounded-[80px] border border-[#83839A] 
+                                             text-[#83839A] placeholder-[#83839A] 
+                                             text-[18px] sm:text-[20px] font-normal tracking-wide 
+                                             focus:outline-none focus:border-[#F4C467] focus:ring-2 focus:ring-[#F4C467] 
+                                             hover:border-[#F4C467] transition duration-300" />
+                    
+                        <div tabindex="0" id="subscribeBtn" class="relative w-full max-w-[180px] h-[60px] rounded-[60px] 
+                                                    bg-gradient-to-r from-[#545AE7] via-[#4b4fc4] to-[#393FCF] 
+                                                    flex items-center justify-center font-medium text-white 
+                                                    text-[20px] sm:text-[22px] overflow-hidden 
+                                                    transition-all duration-300 ease-in-out 
+                                                    transform hover:-translate-y-1 hover:scale-105 
+                                                    focus:border-2 focus:border-white focus:animate-pulse-border 
+                                                    focus:outline-none group">
+                            Subscribe
+                        </div>
+                    </div>
+                </div>
+                   <!-- three -->
+                <div class="w-full max-w-[565px] h-[70px] flex flex-col items-center justify-between font-poppins ">
+                    <div class="w-full max-w-[564px] flex items-center justify-between gap-4">
+                        <div class="w-full max-w-[93px] flex-col sm:flex-row items-center justify-between font-normal text-[14px] sm:text-[22px] text-center tracking-wide text-[#B2B3CF]">Careers</div>
+                        <div class="hidden sm:inline-block w-px h-[17px] border-[1px] border-[#626381]"></div>
+                        <div class="w-full max-w-[161px] flex items-center justify-between font-normal text-[14px] sm:text-[22px] text-center tracking-wide text-[#B2B3CF]">Privacy Policy</div>
+                        <div class="hidden sm:inline-block w-px h-[17px] border-[1px] border-[#626381]"></div>
+                        <div class="w-full max-w-[600px] flex items-center justify-between font-normal text-[14px] sm:text-[22px] text-center tracking-wide text-[#B2B3CF]">Terms & Conditions</div>
+                    </div>
+                    <div class="w-full max-w-[358px] flex items-center justify-between font-normal text-[18px] sm:text-[22px] text-center tracking-wide text-[#B2B3CF]">© 2021 Class Technologies Inc. </div>
+                </div>
+
+            </div>
+        </footer>
+</body> 
+<script>
+  document.getElementById('subscribeBtn').addEventListener('click', function () {
+    const emailInput = document.getElementById('emailInput');
+    
+    if (emailInput.value.trim() !== "") {
+      alert("Thank you for subscribing!");
+    }
+
+    emailInput.value = ""; 
+  });
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+</html>
